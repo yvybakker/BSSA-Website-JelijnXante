@@ -64,6 +64,10 @@ a {
     display: none;
   }
 
+  .c-contact {
+    display: none;
+  }
+
   .logo {
     position: fixed;
     font-size: 0.7em;
@@ -73,8 +77,18 @@ a {
     text-align: center;
   }
 
-  .contact-info {
-    color: #151a30;
+  .c-contact-info {
+    color: #141e8c;
+    font-size: 1em;
+    position: absolute;
+    top: 5em;
+    left: 3em;
+    right: 3em;
+    text-align: center;
+  }
+
+  .a-contact-info {
+    color: #141e8c;
     font-size: 1em;
     position: absolute;
     top: 5em;
