@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <link rel="stylesheet" href="./styles/styles.css" />
+    <meta charset="UTF-8">
+    <title>studio JXV</title>
+    <link rel="shortcut icon" type="image/jpg" href="./style/jvx-favicon.jpg">
+
+    <header class="hamburger">
+        <input class="menu-btn" type="checkbox" id="menu-btn" />
+        <label class="menu-icon" for="menu-btn"><span class="navicon"></span></label>
+        <ul class="menu">
+            <li><a href="./index.html">gallery</a></li>
+            <li><a href="./jxv-about.html">about</a></li>
+            <li><a href="./jxv-contact.html">contact</a></li>
+            <li><a href="./jxv-shop.html">shop</a></li>
+        </ul>
+    </header>
+
+</head>
+
+<body>
+    <nav>
+        <h1></h1>
+    </nav>
+    <main>
+        <div class="container">
+            <img src="./styles/jxv-desktop-home.jpg" alt="Snow" class="bg">
+            <div><a class="logo" href="index.html">studio Jelijn <br> Xante Verhoeven</a></div>
+            <div><a class="gallery" href="./index.html">_</a></div>
+            <div><a class="about" href="jxv-about.html">about</a></div>
+            <div><a class="shop" href="jxv-shop.html">shop</a></div>
+            <div><a class="contact" href="jxv-contact.html">contact</a></div>
+        </div>
+    </main>
+
+    <body>
+        <div class="row">
+            <div class="column">
+                <img src="./gallery/s-jvx-1.png" style="width:100%" onclick="openModal();currentSlide(1)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-2.png" style="width:100%" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-3.png" style="width:100%" onclick="openModal();currentSlide(3)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-4.png" style="width:100%" onclick="openModal();currentSlide(4)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-6.png" style="width:100%" onclick="openModal();currentSlide(1)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-7.png" style="width:100%" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-8.png" style="width:100%" onclick="openModal();currentSlide(3)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-9.png" style="width:100%" onclick="openModal();currentSlide(4)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-10.png" style="width:100%" onclick="openModal();currentSlide(2)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-11.png" style="width:100%" onclick="openModal();currentSlide(3)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-12.png" style="width:100%" onclick="openModal();currentSlide(4)"
+                    class="hover-shadow cursor">
+            </div>
+            <div class="column">
+                <img src="./gallery/s-jvx-13.png" style="width:100%" onclick="openModal();currentSlide(4)"
+                    class="hover-shadow cursor">
+            </div>
+        </div>
+
+        <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+
+                <div class="mySlides">
+                    <div class="numbertext"></div>
+                    <img src="./gallery/s-jvx-1.png" style="width:40%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext"></div>
+                    <img src="./gallery/s-jvx-2.png" style="width:40%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext"></div>
+                    <img src="./gallery/s-jvx-3.png" style="width:40%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext"></div>
+                    <img src="./gallery/s-jvx-4.png" style="width:40%">
+                </div>
+
+                <div class="mySlides">
+                    <div class="numbertext"></div>
+                    <img src="./gallery/s-jvx-6.png" style="width:40%">
+                </div>
+                <div class="mySlides">
+                    <div class="numbertext"></div>
+                    <img src="./gallery/s-jvx-7.png" style="width:40%">
+                </div>
+
+                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+            </div>
+        </div>
+
+        <script>
+            function openModal() {
+                document.getElementById("myModal").style.display = "block";
+            }
+
+            function closeModal() {
+                document.getElementById("myModal").style.display = "none";
+            }
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("demo");
+                var captionText = document.getElementById("caption");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+                captionText.innerHTML = dots[slideIndex - 1].alt;
+            }
+        </script>
+
+    </body>
+
+</body>
+
+</html>

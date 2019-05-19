@@ -1,0 +1,423 @@
+@font-face {
+  font-family: "circular";
+  src: url("styles/fonts/circular");
+  src: ("styles/fonts/circular.ttf");
+}
+
+body {
+  box-sizing: border-box;
+}
+
+body {
+  margin: -20px;
+  padding: 0px;
+}
+
+.bg {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #141e8c;
+}
+
+.container {
+  font-family: circular;
+  font-size: 2em;
+  position: relative;
+  text-align: center;
+  letter-spacing: 0.07em;
+}
+
+
+@media (min-width: 375px) {
+  .gallery {
+    display: none;
+  }
+
+  .contact {
+    display: none;
+  }
+
+  .about {
+    display: none;
+  }
+
+  .gallery {
+    display: none;
+  }
+
+  .shop {
+    display: none;
+  }
+
+  .c-about {
+    display: none;
+  }
+
+  .c-gallery {
+    display: none;
+  }
+
+  .c-shop {
+    display: none;
+  }
+
+  .logo {
+    position: fixed;
+    font-size: 0.7em;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .contact-info {
+    color: #151a30;
+    font-size: 1em;
+    position: absolute;
+    top: 5em;
+    left: 3em;
+    right: 3em;
+    text-align: center;
+  }
+
+  .bg {
+    display: none;
+  }
+
+  .s-image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .lightbox {
+    width: 50%;
+    padding: 2em;
+  }
+
+  .s-back {
+    display: none;
+  }
+
+  .hamburger ul {
+    overflow: hidden;
+    text-decoration: none;
+    list-style: none;
+  }
+
+  .hamburger li a {
+    font-family: circular;
+    text-align: center;
+    display: block;
+    padding: 10%;
+    text-decoration: none;
+  }
+
+  .hamburger .menu {
+    clear: both;
+    max-height: 0;
+    transition: max-height 0.2s ease-out;
+  }
+
+  .hamburger .menu-icon {
+    cursor: pointer;
+    float: right;
+    padding: 80px 30px;
+    position: relative;
+  }
+
+  .hamburger .menu-icon .navicon {
+    display: block;
+    height: 2px;
+    position: relative;
+    top: 5vh;
+    right: 5vh;
+    transition: background 0.2s ease-out;
+    width: 40px;
+  }
+
+  .hamburger .menu-icon .navicon:before,
+  .hamburger .menu-icon .navicon:after {
+    background: #141e8c;
+    content: "";
+    display: block;
+    height: 150%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+    width: 100%;
+  }
+
+  .hamburger .menu-btn:checked~.menu {
+    max-height: 100vh;
+  }
+
+  .hamburger .menu-btn:checked~.menu-icon .navicon:before {
+    transform: rotate(-90deg);
+  }
+
+  .hamburger .menu-btn:checked~.menu-icon .navicon:after {
+    transform: rotate(90deg);
+  }
+}
+
+@media (min-width: 768px) {
+  .bg {
+    display: block;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .logo {
+    position: fixed;
+    top: 10vh;
+    right: 5vh;
+    font-size: 0.8em;
+    text-align: left;
+  }
+
+  .a-contact-info {
+    color: #141e8c;
+    font-size: 0.8em;
+    position: absolute;
+    top: 50vh;
+    left: 100vh;
+    right: 30vh;
+    text-align: left;
+  }
+
+  .c-contact-info {
+    color: #cde4ed;
+    font-size: 0.8em;
+    position: absolute;
+    top: 10vh;
+    left: 10vh;
+    text-align: left;
+  }
+
+  .gallery {
+    font-size: 0.8em;
+    display: block;
+    position: fixed;
+    bottom: 5vh;
+    left: 5vh;
+  }
+
+  .c-gallery {
+    font-size: 0.8em;
+    color: #cde4ed;
+    display: block;
+    position: fixed;
+    bottom: 5vh;
+    left: 5vh;
+  }
+
+  .contact {
+    font-size: 0.8em;
+    display: block;
+    position: fixed;
+    bottom: 5vh;
+    left: 50vh;
+  }
+
+  .c-contact {
+    font-size: 0.8em;
+    color: #cde4ed;
+    display: block;
+    position: fixed;
+    bottom: 5vh;
+    left: 50vh;
+  }
+
+  .about {
+    font-size: 0.8em;
+    display: block;
+    position: fixed;
+    bottom: 5vh;
+    right: 50vh;
+  }
+
+  .c-about {
+    font-size: 0.8em;
+    color: #cde4ed;
+    display: block;
+    position: fixed;
+    bottom: 5vh;
+    right: 50vh;
+  }
+
+
+  .shop {
+    font-size: 0.8em;
+    display: block;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+  }
+
+  .c-shop {
+    font-size: 0.8em;
+    color: #cde4ed;
+    display: block;
+    position: fixed;
+    bottom: 5vh;
+    right: 5vh;
+  }
+
+  .s-back {
+    font-size: 0.8em;
+    display: block;
+    color: #f5a06c;
+    font-size: 0.7em;
+    position: fixed;
+    top: 4vh;
+    left: 3vh;
+  }
+
+  .s-image-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+
+  .lightbox {
+    width: 40%;
+    margin: 0.3em;
+  }
+
+
+  /* lightbox */
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .row>.column {
+    padding: 8px;
+  }
+
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+    width: 25%;
+  }
+
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 30%;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: transparent;
+  }
+
+  .cursor {
+    cursor: pointer;
+  }
+
+  .modal-content {
+    position: relative;
+    float: center;
+    margin: auto;
+    padding: 0em;
+    width: 90%;
+    height: 90%;
+  }
+
+  .close {
+    color: #141e8c;
+    position: fixed;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+  }
+
+  .mySlides {
+    display: none;
+  }
+
+
+  .prev,
+  .next {
+    cursor: pointer;
+    color: #141e8c;
+    font-size: 25px;
+    transition: 0.6s ease;
+
+  }
+
+  .next {
+    right: 0;
+  }
+
+  img {
+    margin: 6px;
+  }
+
+}
+
+@media (min-width: 1268px) {
+
+  .logo {
+    font-size: 1em;
+  }
+
+  .a-contact-info {
+    font-size: 1em;
+  }
+
+  .c-contact-info {
+    font-size: 1em;
+  }
+
+  .gallery {
+    font-size: 1em;
+  }
+
+  .c-gallery {
+    font-size: 1em;
+  }
+
+  .contact {
+    font-size: 1em;
+  }
+
+  .c-contact {
+    font-size: 1em;
+  }
+
+  .about {
+    font-size: 1em;
+  }
+
+  .c-about {
+    font-size: 1em;
+  }
+
+
+  .shop {
+    font-size: 1em;
+  }
+
+  .c-shop {
+    font-size: 1em;
+  }
+
+  .s-back {
+    font-size: 1em;
+  }
+}
