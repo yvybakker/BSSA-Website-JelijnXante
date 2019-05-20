@@ -1,8 +1,15 @@
 @font-face {
-  font-family: "circular";
-  src: url("../styles/fonts/circular.ttf");
-  src: ("../styles/fonts/circular.ttf");
+  font-family: 'circular';
+  src: url('../styles/fonts/converted-files/circular.eot');
+  src: url('../styles/fonts/converted-files/circular.woff2') format('woff2'),
+    url('../styles/fonts/converted-files/Circular-Medium.woff') format('woff'),
+    url('../styles/fonts/converted-files/Circular-Medium.ttf') format('truetype'),
+    url('../styles/fonts/converted-files/Circular-Medium.svg') format('svg'),
+    url('../styles/fonts/converted-files/circular.eot') format('embedded-opentype');
+  font-weight: normal;
+  font-style: normal;
 }
+
 
 body {
   box-sizing: border-box;
